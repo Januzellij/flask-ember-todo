@@ -53,8 +53,8 @@ class Todo(Resource):
 		db.session.commit()
 	
 
-api.add_resource(Todos, '/api/todos')
-api.add_resource(Todo, '/api/todos/<int:id>')
+api.add_resource(Todos, '/api/todos', methods=['GET','POST'])
+api.add_resource(Todo, '/api/todos/<int:id>', methods=['GET','POST','PUT'])
 
 @app.route('/')
 def index():
