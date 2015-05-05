@@ -54,7 +54,7 @@ class Todo(Resource):
 	
 
 api.add_resource(Todos, '/api/todos', methods=['GET','POST'])
-api.add_resource(Todo, '/api/todos/<int:id>', methods=['GET','POST','PUT'])
+api.add_resource(Todo, '/api/todos/<int:id>', methods=['GET','POST','PUT', 'DELETE'])
 
 @app.route('/')
 def index():
